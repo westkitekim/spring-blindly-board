@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>게시물 작성폼</title>
+</head>
+
+<style>
+    .layout {
+        width: 500px; /* div 태그의 너비  500px */
+        margin: 0 auto; /* 양쪽 여백 위아래 0 , 좌우는 auto로 설정 */
+        margin-top: 40px; /* 맨 위 40px 띄워놓기 */
+    }
+
+    /* .layout > input : layout 바로 하위의 input에 적용하는 것이기 때문에 수정 */
+    .layout input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .layout textarea {
+        width: 100%;
+        margin-top: 10px;
+        min-height: 300px;
+    }
+</style>
+
+<body>
+    <div class="layout">
+        <form action="/board/writepro" method="post" enctype="multipart/form-data">
+            <input name="title" type="text">
+            <textarea name="content"></textarea>
+            <input type="file" name="file"><br><br>
+            <button type="submit">작성</button>
+        </form>
+    </div>
+</body>
+</html>

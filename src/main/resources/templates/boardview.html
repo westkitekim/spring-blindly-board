@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 상세 페이지</title>
+</head>
+<body>
+
+    <h1 th:text="${board.title}">제목입니다.</h1>
+    <p th:text="${board.content}">내용이 들어갈 부분입니다.</p>
+    <a th:href="@{${board.filepath}}">다운받기</a> <!-- filepath : DB에 저장된 파일경로 -->
+    <a th:href="@{/board/delete(id=${board.id})}">글삭제</a> <!-- # : 자기가 자신의 현재 페이지를 부를 수 있게 하는 것, url 앞에 /좀.. -->
+    <a th:href="@{/board/modify/{id}(id = ${board.id})}">글수정</a>
+</body>
+</html>

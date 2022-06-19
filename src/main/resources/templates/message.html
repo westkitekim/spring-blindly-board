@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<script th:inline="javascript">
+
+  // 컨트롤러에서 받아온 변수 적용하기
+  /*<![CDATA[*/
+
+  var message = [[${message}]]; // 컨트롤레에서 메세지 전송하면 변수에 담기
+  alert(message);
+
+  location.replace([[${searchUrl}]]); // 페이지 이동 경로
+
+  /*]]>*/
+
+</script>
+
+<body>
+
+</body>
+</html>
