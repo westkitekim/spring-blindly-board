@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"> <!-- 타임리프 문법사용 -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org"><!-- 타임리프 문법사용 -->
 <head>
     <meta charset="UTF-8">
     <title>게시글 리스트 페이지</title>
 </head>
 
 <style>
+    .body {
+        height: 100vh;
+        width: 100vw;
+        background-image: url('https://pbs.twimg.com/media/EbSKBtIUMAA47Eq.jpg:large'); /* url 수정필요 220710*/
+        background-repeat : no-repeat;
+        background-size : cover;
+    }
+
     .layout {
         width: 500px; /* div 태그의 너비  500px */
         margin: 0 auto; /* 양쪽 여백 위아래 0 , 좌우는 auto로 설정 */
@@ -15,8 +23,7 @@
 </style>
 
 <body>
-
-    <div class="layout">
+    <div class="body">
         <table>
             <thead>
                 <tr>
